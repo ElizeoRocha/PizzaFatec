@@ -1,0 +1,64 @@
+          body{
+            background: rgb(100, 0, 0);
+          }
+
+          .navbar {
+              background: black;             
+          }
+
+
+        h3#h3 { text-shadow: 0 0 3px black; }
+        h1#h1 {color: white;
+          text-shadow: 0 0 2px black;}
+
+        h5#h5  { text-shadow: 0 0 2px black;}
+
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: white;
+            background: rgb(48, 0, 62);
+        }
+        .schollSpySite{
+          position: relative;
+          overflow: auto;
+          height: 350px;
+        }
+
+         .container2{
+          background: black;
+        }
+
+        .p2 {color: rgb(100, 0, 0)}
+
+        .h3white{color: rgb(100, 0, 0)}
+        .btn1 {background: rgb(100, 0, 0);
+          color: white;}
+
+h1#titulo{
+  color: black;
+  text-shadow: 0 0 0px black;
+}
+h5#subtitulo{
+  color: black;
+  text-shadow: 0 0 0px black;
+}
+
+h5#card{
+  text-shadow: 0 0 0px black;
+}
+
+tr#tabela{
+   background: rgb(89, 0, 120);
+}
+
+hr#hr1{
+  background: rgb(100, 0, 0);
+}
+
+div#pizza-modal{
+  background: rgb(50, 0, 0);
+  border: black;
+}
+
+
+
