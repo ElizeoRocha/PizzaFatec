@@ -68,13 +68,13 @@ require "sessao.php";
                               <?php echo $_SESSION['carrinhoPreco'] ?>
                          <?php }?>
                         </p>
-
+                        <?php if (isset($_SESSION['carrinhoItem'])) {?>
                         <?php if (isset($_SESSION['usuario'])) {?>
                             <a href="confirmar-pedido.php" class="btn btn-danger col-12">Finalizar</a>
                         <?php } else {?>
                             <a href="adicionar-endereco.php" class="btn btn-danger col-12">Finalizar</a>
                         <?php }?>
-
+                        <?php }?>
                       </div>
                   </li>
 

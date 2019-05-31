@@ -44,14 +44,13 @@ $linha = $sql_query->fetch_assoc();
                                 <h3 class="card-title text-white mt-3"><?php echo $linha['nome_bebida'] ?></h3>
                                 <p class="card-text text-white">R$ <?php echo $linha['preco_bebida'] ?> Media</p>
                             
-                                <a href="#" class="card-link text-danger " data-toggle="modal" data-target="#<?php echo $linha['nome_bebida'] ?>" >Ver detalhes</a>
-                                <a href="#" class="card-link text-danger" data-toggle="modal" data-target="#<?php echo $linha['id_bebida'] ?>" ><i class="fas fa-shopping-cart"></i> Comprar</a>
+                                <a href="carrinho-bebida.php" class="card-link text-danger" data-toggle="modal" data-target="#<?php echo $linha['nome_bebida'] ?>" ><i class="fas fa-shopping-cart"></i> Adicionar ao carrinho</a>
                           </div>
                     </div>
         </div>
 
         <div class="modal fade" id="<?php echo $linha['nome_bebida'] ?>" tabindex="-1" role="dialog">
-          <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
 
               <div class="modal-header">
@@ -61,12 +60,13 @@ $linha = $sql_query->fetch_assoc();
               </div>
 
               <div class="modal-body">
+                  <p>Tem certeza que deseja adcionar este produto ao carrinho?</p>
                 <p><?php echo $linha['desc_bebida'] ?></p>
               </div>
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger col-sm-3" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary col-sm-3" data-dismiss="modal"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                <a href="carrinho-bebida.php?n1=<?php echo $linha['id_bebida'] ?>" class="btn btn-primary col-sm-3"><i class="fas fa-shopping-cart"></i> Adicionar</a>
               </div>
             </div>
           </div>

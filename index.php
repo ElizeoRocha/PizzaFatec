@@ -100,9 +100,8 @@ $linha = $sql_query->fetch_assoc();
                                 <img class="card-img-top rounded" src="<?php echo $cardFoto ?>">
                                 <h3 class="card-title text-white mt-3"><?php echo $linha['nome_combo'] ?></h3>
                                
-                                <p class="card-text text-white">R$ <?php echo $linha['preco_pizza'] ?> Grande</p>
-                                <a href="#" class="card-link text-danger " data-toggle="modal" data-target="#<?php echo $linha['nome_combo'] ?>" >Ver detalhes</a>
-                                <a href="#" class="card-link text-danger" data-toggle="modal" data-target="#<?php echo $linha['categoria_ntc'] ?>" ><i class="fas fa-shopping-cart"></i> Comprar</a>
+                                <p class="card-text text-white">R$: <?php echo $linha['preco_combo'] ?></p>
+                                <a href="#" class="card-link text-danger" data-toggle="modal" data-target="#<?php echo $linha['nome_combo'] ?>" ><i class="fas fa-shopping-cart"></i> Adicionar ao carrinho</a>
                           </div>
                     </div>
         </div>
@@ -118,12 +117,13 @@ $linha = $sql_query->fetch_assoc();
               </div>
 
               <div class="modal-body">
-                <p><?php echo $linha['desc_pizza'] ?></p>
+                  <p>Tem certeza que deseja adcionar este produto ao carrinho?</p>
+                <p><?php echo $linha['desc_combo'] ?></p>
               </div>
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger col-sm-3" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary col-sm-3" data-dismiss="modal"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                <a href="carrinho-combo.php?n1=<?php echo $linha['id_combo'] ?>" class="btn btn-primary col-sm-3"><i class="fas fa-shopping-cart"></i> Adicionar</a>
               </div>
             </div>
           </div>

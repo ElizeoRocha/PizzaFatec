@@ -10,18 +10,18 @@ if (!isset($_SESSION['carrinhoItem'])) {
 }
 
 // FAZENDO SELECT NO BANCO E JOGANDO EM UMA VARIAVEL CHAMADA LINHA
-$sql_code = "SELECT * FROM Pizza WHERE id_pizza = $id";
+$sql_code = "SELECT * FROM combo WHERE id_combo = $id";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 $linha = $sql_query->fetch_assoc();
 
 if (is_null($_SESSION['carrinhoItem'])) {
-	$_SESSION['carrinhoItem'] = "Pizza " . $linha['nome_pizza'];
-	$_SESSION['carrinhoPreco'] = $linha['preco_pizza'];
+	$_SESSION['carrinhoItem'] = "Combo " . $linha['nome_combo'];
+	$_SESSION['carrinhoPreco'] = $linha['preco_combo'];
 } else {
-	$_SESSION['carrinhoItem'] = $_SESSION['carrinhoItem'] . "<br>" ."Pizza ". $linha['nome_pizza'];
-	$_SESSION['carrinhoPreco'] = $_SESSION['carrinhoPreco'] + $linha['preco_pizza'];
+	$_SESSION['carrinhoItem'] = $_SESSION['carrinhoItem'] . "<br>" ."Combo ". $linha['nome_combo'];
+	$_SESSION['carrinhoPreco'] = $_SESSION['carrinhoPreco'] + $linha['preco_combo'];
 }
 
-header('LOCATION: pizza-menu.php');
+header('LOCATION: index.php');
 ?>
 

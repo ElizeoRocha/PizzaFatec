@@ -25,7 +25,7 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 
 		if ($dado['senha_cliente'] == $_SESSION['senha']) {
 			$_SESSION['usuario'] = $dado['id_cliente'];
-			
+			$erro = "logado";
 
 		} else {
 
@@ -57,15 +57,6 @@ if (isset($_POST['email']) && strlen($_POST['email']) > 0) {
 
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                   <strong>Falha!: </strong>A senha esta incorreta!
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-
-                          <?php } else{?>
-
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                  <strong>Sucesso!: </strong>Voçê esta logado!
                                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>

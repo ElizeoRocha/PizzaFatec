@@ -51,7 +51,7 @@ $linha = $sql_query->fetch_assoc();
                           <div class="card-body text-center" >
                                 <img class="card-img-top rounded" src="<?php echo $cardFoto ?>">
                                 <h3 class="card-title text-white mt-3"><?php echo $linha['nome_pizza'] ?></h3>
-                                <p class="card-text text-white">R$ <?php echo $linha['preco_pizza'] ?> Grande</p>
+                                <p class="card-text text-white">R$: <?php echo $linha['preco_pizza'] ?></p>
                                 
                                 <a href="#" class="card-link text-danger" data-toggle="modal" data-target="#<?php echo $linha['nome_pizza'] ?>" ><i class="fas fa-shopping-cart"></i> Adicionar ao carrinho</a>
                           </div>
